@@ -121,8 +121,6 @@
 								boxMap[i]="partBox"+i;
 								
 								var str="<div style='float:left;"+
-											//"border-top:solid 1px gray;"+
-											//"border-bottom:solid 1px gray;"+
 											"margin-top:2px;"+
 											"background-color:"+parameters.colors[i]+";"+
 											"height:"+parameters.height+"px;"+
@@ -165,11 +163,9 @@
 								
 								//boxes near selected cursors
 								drag.firstBox = boxMap[drag.selectedCursor];						 
-								drag.secondBox = boxMap[drag.selectedCursor+1];
-								
+								drag.secondBox = boxMap[drag.selectedCursor+1];								
 								drag.enable = true;
 								drag.oldPosition = ev.pageX;
-								
 								ev.preventDefault();//disable text selection on drag and drop
 							});					
 						}
