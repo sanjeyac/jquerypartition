@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Misa Dev -  JQuery Partition Plugin</title>
+		<!-- include jquery -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<!-- include the plugin -->
+		<script type="text/javascript" src="jquery.partition.js"></script>
+		
+		<script type="text/javascript" charset="utf-8">							
+			$(document).ready(function(){
+				$('#partition').partition({
+					onDrag: function(vals){
+						$('#b1').html(vals[0]);
+						$('#b2').html(vals[1]);
+						$('#b3').html(vals[2]);
+						$('#b4').html(vals[3]);
+					},
+					onInit: function(vals){
+						$('#b1').html(vals[0]);
+						$('#b2').html(vals[1]);
+						$('#b3').html(vals[2]);
+						$('#b4').html(vals[3]);
+					},
+					
+				});									
+			});
+		</script>
+		
+		<style>
+			body{
+				font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+				font-size: 12px;
+			}
+			h2{
+				margin-top: 50px;
+			}
+			#wrapper{
+				margin-left: auto;margin-right: auto;width: 800px;
+				box-shadow: 0 0 20px black;
+				padding:20px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		
+		<div id="wrapper">
+			<h1> Jquery Partition Plugin </h1>
+			<h2>Example</h2>
+			<div id="partition"></div>
+			<h2>onDrag Callback Example</h2>
+			<ul>
+				<li style="color:red;">Block 1: <span id="b1">25</span>%</li>
+				<li style="color:blue;">Block 2: <span id="b2">29</span>%</li>
+				<li>Block 3: <span id="b3">19</span>%</li>
+				<li style="color:green;">Block 4: <span id="b4">26</span>%</li>
+			</ul>
+			<h2>Usage/Code</h2>
+			<p>
+				<!-- generated code for syntax highlight -->
+				</p><div><font color="Blue">&lt;</font><font color="Maroon">script</font>&nbsp;<font color="Red">type</font>="<font color="Blue">text/javascript</font>"&nbsp;<font color="Red">src</font>="<font color="Blue">jquery.min.js</font>"<font color="Blue">&gt;</font><font color="Blue">&lt;</font>/<font color="Maroon">script</font><font color="Blue">&gt;</font> <br><font color="Blue">&lt;</font><font color="Maroon">script</font>&nbsp;<font color="Red">type</font>="<font color="Blue">text/javascript</font>"&nbsp;<font color="Red">src</font>="<font color="Blue">jquery.partition.js</font>"<font color="Blue">&gt;</font><font color="Blue">&lt;</font>/<font color="Maroon">script</font><font color="Blue">&gt;</font> <br> <br><font color="Blue">&lt;</font><font color="Maroon">script</font>&nbsp;<font color="Red">type</font>="<font color="Blue">text/javascript</font>"&nbsp;<font color="Red">charset</font>="<font color="Blue">utf-8</font>"<font color="Blue">&gt;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <br>&nbsp;&nbsp;&nbsp;&nbsp;$(document).ready(function(){ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('#partition').partition();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <br>&nbsp;&nbsp;&nbsp;&nbsp;}); <br><font color="Blue">&lt;</font>/<font color="Maroon">script</font><font color="Blue">&gt;</font> <br> <br><font color="Blue">&lt;</font>!--&nbsp;code&nbsp;in&nbsp;body&nbsp;--<font color="Blue">&gt;</font> <br><font color="Blue">&lt;</font><font color="Maroon">body</font><font color="Blue">&gt;</font> <br>&nbsp;&nbsp;&nbsp;&nbsp;... <br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="Blue">&lt;</font><font color="Maroon">div</font>&nbsp;<font color="Red">id</font>="<font color="Blue">partition</font>"<font color="Blue">&gt;</font><font color="Blue">&lt;</font>/<font color="Maroon">div</font><font color="Blue">&gt;</font> <br>&nbsp;&nbsp;&nbsp;&nbsp;... <br><font color="Blue">&lt;</font>/<font color="Maroon">body</font><font color="Blue">&gt;</font> <br></div>				
+				
+			<p></p>
+			
+			<h2>Parameters Usage/Code</h2>
+			<div style="font-family: Courier New;">$(document).ready(<span style=" color: Blue;">function</span>(){&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;$(<span style=" color: Maroon;">'#partition'</span>).partition({ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;<span style=" color: Maroon;">20</span>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;<span style=" color: Maroon;">500</span>, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values:&nbsp;[<span style=" color: Maroon;">25</span>,<span style=" color: Maroon;">25</span>,<span style=" color: Maroon;">25</span>,<span style=" color: Maroon;">25</span>], <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onDrag:&nbsp;<span style=" color: Blue;">function</span>(values){&nbsp;show(values);&nbsp;},&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;});&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <br>});&nbsp;</div>
+			
+			<h2>Parameters</h2>
+			<table cellpadding="5">
+				<tbody><tr>
+					<td><b>Parameter Name</b></td>
+					<td><b>Description</b></td>
+					<td><b>Default Values</b></td>
+				</tr>
+				<tr>
+					<td><i>values</i></td>
+					<td>Partitions value (indicated in percentage)</td>
+					<td>[ 25, 25, 25, 25]</td>
+				</tr>
+				<tr>
+					<td><i>colors</i></td>
+					<td>Color of the bars of the rappresenting paritions ( usefull for a legend )</td>
+					<td>[ "red", "blue", "black", "green"]</td>		
+				</tr>
+				<tr>
+					<td><i>height</i></td>
+					<td>height of the partition bars (pixel)</td>
+					<td>20</td>					
+				</tr>
+				<tr>
+					<td><i>width</i></td>
+					<td>width of the widget (pixel)</td>
+					<td>500</td>					
+				</tr>
+				<tr>
+					<td><i>cursorBackgroundColor</i></td>
+					<td>Internal color of the cursors</td>
+					<td>#e6e6e6</td>					
+				</tr>
+				<tr>
+					<td><i>cursorBorderColor</i></td>
+					<td>Border color of the cursors</td>
+					<td>#d4d4d4</td>					
+				</tr>																												
+				<tr>
+					<td><i>onCursorStop</i></td>
+					<td>callback function executed when a cursor drag stops <br> [function parameters: actual values]</td>
+					<td>null</td>
+				</tr>
+				<tr>
+					<td><i>onDrag</i></td>
+					<td>callback function executed when a cursor is dragged (continuosly while moving) <br> [function parameters: actual values]</td>
+					<td>null</td>					
+				</tr>
+				<tr>
+					<td><i>onInit</i></td>
+					<td>callback function executed when the widget is initialized  <br> [function parameters: actual values]</td>
+					<td>null</td>					
+				</tr>				
+			</tbody></table>
+		</div>		
+		
+	
+
+</body></html>
